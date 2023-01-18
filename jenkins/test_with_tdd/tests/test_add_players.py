@@ -1,6 +1,6 @@
 import unittest
 
-from source.team import Team
+from jenkins.test_with_tdd.source.team import Team
 
 class TestTeamPlayers(unittest.TestCase):
 
