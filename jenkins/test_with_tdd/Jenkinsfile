@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'python3 -m unittest jenkins/test_with_tdd/tests'
+                sh 'python3 -m unittest discover jenkins/test_with_tdd/tests'
             }
 
            }
