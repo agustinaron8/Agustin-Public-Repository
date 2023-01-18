@@ -9,14 +9,13 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'python3 jenkins/source/test.py'
+                sh 'python3 -m unittest jenkins/test_with_tdd/tests'
             }
 
            }
         stage('Copy Build') {
             steps {
-                sh 'mkdir /var/lib/jenkins/jobs/buildCopy'
-                sh 'cp -r /var/lib/jenkins/jobs/test/* /var/lib/jenkins/jobs/buildCopy'
+                sh 'echo "Hello World"'
             }
             
             
