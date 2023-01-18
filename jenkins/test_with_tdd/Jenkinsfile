@@ -1,0 +1,24 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                sh 'python3 jenkins/source/pyexample.py'
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'python3 -m unittest jenkins/test_with_tdd/tests'
+            }
+
+           }
+        stage('Copy Build') {
+            steps {
+                sh 'echo "Hello World"'
+            }
+            
+            
+        }
+    }
+}
